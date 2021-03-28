@@ -25,7 +25,7 @@ class OrdinalLogisticRegression():
         running = []
         for target in self.targets[:-1]:
             running.append(target)
-            # If y is in the running list of targets we set it to 0.  Otherwise we set y to 1 as shown in the lecture
+            # If y is in the running list of targets we set it to 0.  Otherwise we set y to 1
             # We progressively shift the 'boundary' adding to our running target list each iteration
             # The last iteration is simply all the targets against the last target, hence why we loop through self.targets[:-1]
             y_ = (~np.isin(y,running)).astype(int)
